@@ -1,0 +1,4 @@
+#Dubbo Registry Cache
+#Fri Aug 24 16:02:37 CST 2018
+com.ITest2\:1.0.0=empty\://10.111.24.72\:20880/com.ITest2?actives\=0&anyhost\=true&application\=dubbo-provider&category\=configurators&check\=false&dubbo\=2.5.3&interface\=com.ITest2&loadbalance\=random&methods\=SaySomething&owner\=ding.lgy,while.lgy&pid\=4804&revision\=1.0.0&side\=provider&timeout\=300&timestamp\=1535097757263&version\=1.0.0
+com.ITest=empty\://10.111.24.72\:20880/com.ITest?anyhost\=true&application\=dubbo-provider&category\=configurators&check\=false&dubbo\=2.5.3&interface\=com.ITest&methods\=SayHello&owner\=ding.lgy,while.lgy&pid\=4804&side\=provider&timestamp\=1535097756547
