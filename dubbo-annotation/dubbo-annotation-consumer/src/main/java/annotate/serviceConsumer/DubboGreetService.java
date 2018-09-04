@@ -1,7 +1,6 @@
 package annotate.serviceConsumer;
 
 import annotation.DubboService;
-import annotation.GreetingService;
 import com.alibaba.dubbo.config.annotation.Reference;
 import org.springframework.stereotype.Component;
 
@@ -9,13 +8,14 @@ import org.springframework.stereotype.Component;
  *@description:
  *
  *@author 10068921(LgyTT)
- *@date 2018/8/28 16:56
+ *@date 2018/9/4 10:10
  */
-@Component("annotate")
-public class GreetServiceConsumer {
+@Component("dubboAnnotate")
+public class DubboGreetService {
     @Reference
-    private GreetingService service;
-    public String SayH(String name){
-        return service.sayS(name);
+    private DubboService dubbo;
+
+    public String doS(String name){
+        return dubbo.getString(name);
     }
 }

@@ -25,8 +25,13 @@
     <!--file指的是缓存文件路径，直接创建在工程里，如果启动后会形成缓存文件，切不能重复，否则会出现系统找不到路径问题-->
     <dubbo:registry address="zookeeper://127.0.0.1:2181" check="false" subscribe="false" register=""></dubbo:registry>
     <!--要暴露的服务接口 -->
-    <dubbo:service interface="com.ITest" ref="springservice" owner="ding.lgy,while.lgy"/>
-    <bean id="springservice" class="com.Test">
+    <dubbo:service interface="com.ITest"  ref="springservice" owner="ding.lgy,while.lgy"/>
+    <bean id="springservice" class="com.impl.Test">
     </bean>
-
+    <dubbo:service interface="com.ITest2" ref="itest2" />
+    <bean id="itest2" class="com.impl.ITest2Impl"/>
+    <dubbo:service interface="com.tApi.IUserService" ref="IUserService"/>
+    <bean id="IUserService" class="com.impl.IUServiceImpl"/>
+    <!--dubbo:service interface="com.alibaba.dubbo.rpc.service.GenericService" ref="genericService"/>
+    <bean class="com.impl.GenericServiceImpl" id="genericService"/-->
 </beans>

@@ -1,4 +1,6 @@
-package com;
+package com.impl;
+
+import com.ITest2;
 
 /*
  *@descripion:

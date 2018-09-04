@@ -19,9 +19,12 @@
     <!--使用zookeeper注册中心暴露服务地址 -->
     <dubbo:registry address="zookeeper://127.0.0.1:2181"></dubbo:registry>
 
-    <dubbo:protocol name="dubbo" port="20880" />
+    <dubbo:protocol name="dubbo" port="20889" />
     <!--要引用的服务 -->
-    <dubbo:reference interface="com.ITest" id="springservice1" ></dubbo:reference>
-    <dubbo:reference interface="com.ITest2" id="serviceA" version="1.0.0"/>
-    <dubbo:reference interface="annotation.GreetingService" id="greetService"/>
+    <!--dubbo:reference interface="com.ITest" id="springservice" ></dubbo:reference-->
+    <dubbo:reference interface="api.DubboService" id="dubboService"/>
+    <!--dubbo:reference interface="com.ITest2" id="serviceA" version="1.0.0"/-->
+    <!--dubbo:reference interface="annotation.GreetingService" id="greetService"/-->
+    <!--dubbo:reference interface="com.alibaba.dubbo.rpc.service.GenericService" id="genericService" generic="true"/-->
+    <!--dubbo:reference interface="com.tApi.IUserService" id="IUserService" generic="true"/-->
 </beans>
